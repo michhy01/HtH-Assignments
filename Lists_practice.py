@@ -6,15 +6,18 @@ print(colors)
 print(cities[-3])
 print(cities[2])
 print(cities[0])
-print()
+
+
 print(colors[-10])
 print(colors[-1])
 print(colors[4])
-print()
+
+
 print(cities[0:4])
 top_cities=cities[0:4]
 print(top_cities)
-print()
+
+
 cities[0]="San Francisco"
 cities[2]="Brooklyn"
 cities[-3]="Hollywood"
@@ -24,7 +27,8 @@ cities.append("Oakland")
 cities.extend(["New York City", "Los Angeles"])
 cities.insert(0,"Miami")
 print(cities)
-print()
+
+
 del cities[4]
 cities.pop(-4)
 cities.remove("Memphis")

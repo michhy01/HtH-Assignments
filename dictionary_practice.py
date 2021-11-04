@@ -36,3 +36,34 @@ print(shoes_instore)
 del shoes_instore["Nike"]
 del shoes_instore["Yeezy"]
 print(shoes_instore)
+
+
+#Python Operators, Iteration, and Functions
+# Step II
+def total_price(menu_item, menu_item2):
+    return food_prices[menu_item] + food_prices[menu_item2]
+print("The total price of beef and cheese is $ " + str(total_price("Beef", "Cheese")))
+
+#Step III
+def price_difference(menu_item, menu_item2):
+    total_diff= food_prices[menu_item] - food_prices[menu_item2] 
+    return abs(total_diff)
+print ("The difference between beef and cheese is $ " + str(price_difference("Beef", "Cheese")))
+
+#Step IV
+def shoes_restock(shoe, num):
+    shoes_instore[shoe] *= num
+    return shoes_instore
+print(shoes_restock("Air Max", 3))
+
+#Step V
+def clearance(shoe, num):
+    shoes_instore[shoe] /= num
+    return shoes_instore
+print(clearance("SB Dunk", 2))
+
+#Step VI
+def shoe_demand(shoe, num):
+    shoes_instore[shoe] **= num
+    return shoes_instore
+print(shoe_demand("Converse", 2))

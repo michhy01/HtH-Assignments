@@ -65,3 +65,13 @@ def reorganized_list(list):
 
 print(all_printed_cities(cities))
 print(reorganized_list(cities))
+
+#Step XI
+print(colors)
+
+def bright_colors(list):
+    if "Orange". "Yellow", "Pink", "White", "Green" in colors
+    print ("My favorite color is" + colors[3])
+
+print(bright_colors(colors))
+

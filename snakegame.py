@@ -9,16 +9,16 @@ high_score = 0
 
 # set up the screen
 win = turtle.Screen()
-win.title("My Really Cool Snake Game")
-win.bgcolor("green")
+win.title("My Classic Snake Game")
+win.bgcolor("blue")
 win.setup(width=600,height=600)
 win.tracer(0)
 
 # Snake Head
 head = turtle.Turtle()
 head.speed(0)
-head.shape("circle")
-head.color("red")
+head.shape("square")
+head.color("green")
 head.penup()
 head.goto(0, 100)
 head.direction = "stop"
@@ -27,7 +27,7 @@ head.direction = "stop"
 food = turtle.Turtle()
 food.speed(0)
 food.shape("circle")
-food.color("yellow")
+food.color("red")
 food.penup()
 food.shapesize(0.50, 0.50)
 food.goto(0, 0)
@@ -46,15 +46,15 @@ def move():
     if head.direction == "up":
         y = head.ycor() # y coordinate of the turtle
         head.sety(y + 20)
-
+ 
     if head.direction == "down":
         y = head.ycor() # y coordinate of the turtle
         head.sety(y - 20)
-
+ 
     if head.direction == "right":
         x = head.xcor() # y coordinate of the turtle
         head.setx(x + 20)
-
+ 
     if head.direction == "left":
         x = head.xcor() # y coordinate of the turtle
         head.setx(x - 20)
@@ -62,15 +62,15 @@ def move():
 def go_up():
     if head.direction != "down":
         head.direction = "up"
-
+ 
 def go_down():
     if head.direction != "up":
         head.direction = "down"
-
+ 
 def go_right():
     if head.direction != "left":
         head.direction = "right"
-
+ 
 def go_left():
     if head.direction != "right":
         head.direction = "left"
@@ -96,9 +96,9 @@ while True:
         x = random.randint(-290, 290)
         y = random.randint(-290, 290)
         food.goto(x, y)
-
+        
         score = score+10
-
+ 
         if score > high_score:
             high_score = score
 
@@ -136,11 +136,11 @@ while True:
             segment.clear()
 
     win.listen()
-    win.onkey(go_up, "w")
-    win.onkey(go_down, "s")
-    win.onkey(go_right, "d")
-    win.onkey(go_left, "a")
+    win.onkey(go_up, "Up")
+    win.onkey(go_down, "Down")
+    win.onkey(go_right, "Right")
+    win.onkey(go_left, "Left")
     time.sleep(delay)
 
     pen.clear()
-    pen.write("Score: {} High Score: {}".format(score, high_score), align="center", font=("Courier", 24, "bold")) 
+    pen.write("Score: {} High Score: {}".format(score, high_score), align="center", font=("Courier", 24, "bold"))
